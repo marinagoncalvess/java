@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        System.out.println("olá mundo!");
+
+        System.out.printf("digite seu nome: ");
+        String name = in.nextLine(); //declara a variável e atribui
+        System.out.println("- " + name);
+
+        System.out.printf("digite sua idade: ");
+        int idade= in.nextInt();
+        System.out.println("- " + idade);
+
+        System.out.println("- " + name + " tem " + idade);
+        System.out.println("- ano de nascimento: " + (2025-idade));
+
+        in.close();
+
+
+    }
+}
