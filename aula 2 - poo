@@ -1,0 +1,55 @@
+import java.util.Scanner;
+
+public class testejava {
+    public static void main(String[] args) {
+
+        var input = new java.util.Scanner(System.in);
+        //Scanner in = new Scanner(System.in);
+
+        
+
+
+        System.out.println("Escolha uma opçaão");
+        System.out.println("1-Calcular média");
+        System.out.println("2-Créditos");
+        int opc = input.nextInt();
+
+        switch (opc) {
+            case 1:
+
+                System.out.println("Calcular média");
+
+                System.out.println("Informe seu nome: ");
+                String nome = input.next();
+
+                System.out.println("Informe a primeira nota: ");
+                float num1 = input.nextFloat();
+
+                System.out.println("Informe a segunda nota: ");
+                float num2 = input.nextFloat();
+
+                //System.out.println((num1+num2)/2);
+                float media = (num1 + num2) / 2;
+                System.out.println(nome + " sua média é " + media);
+
+
+                if (media < 5) {
+                    System.out.println("Reprovado");
+                } else if (media >= 5 && media < 8) {
+                    System.out.println("Aproximado");
+                } else {
+                    System.out.println("Nivelado");
+
+
+                }
+                break;
+            case 2:
+                System.out.println("Desenvolvido por JuMaGa");
+                break;
+            default:
+                System.out.println("Opção inválida.");
+
+              
+        }
+    }
+}
