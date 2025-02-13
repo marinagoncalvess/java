@@ -6,7 +6,12 @@ public class testejava {
         var input = new java.util.Scanner(System.in);
         //Scanner in = new Scanner(System.in);
 
-        
+        String frase = input.nextLine();
+        int cont = 0;
+
+        System.out.println("Quantos alunos vão ser cadastrados? ");
+
+        while (cont <= 10) {
 
 
         System.out.println("Escolha uma opçaão");
@@ -49,6 +54,8 @@ public class testejava {
             default:
                 System.out.println("Opção inválida.");
 
+                  cont = cont +1;
+        }
               
         }
     }
