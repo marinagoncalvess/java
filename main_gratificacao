@@ -1,0 +1,69 @@
+import java.util.Scanner;
+
+public class main_gratificacao {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int cont = 0;
+
+        while (cont < 10) {
+            System.out.println("selecione uma opção:");
+            System.out.println("1- masculino");
+            System.out.println("2- feminino");
+            System.out.println("3- finalizar programa");
+            int opc = in.nextInt();
+
+            switch (opc) {
+                case 1:
+                    System.out.println("-- Masculino --");
+
+                    System.out.print("informe seu nome: ");
+                    String mname = in.next();
+
+                    System.out.print("informe sua idade: ");
+                    int mage = in.nextInt();
+
+                    System.out.print("informe seu salário: R$");
+                    double msal = in.nextDouble();
+
+                    if (mage >= 30) {
+                        System.out.println("-- salário final: R$ " + String.format("%.2f", msal * (1 + 0.10)) + " --");
+                    } else {
+                        System.out.println("-- salário final: R$ " + String.format("%.2f", msal * (1 + 0.05)) + " --");
+                    }
+                    break;
+
+                case 2:
+                    System.out.println("-- Feminino --");
+
+                    System.out.print("informe seu nome: ");
+                    String fname = in.next();
+
+                    System.out.print("informe sua idade: ");
+                    int fage = in.nextInt();
+
+                    System.out.print("informe seu salário: R$");
+                    double fsal = in.nextDouble();
+
+                    if (fage >= 30) {
+                        System.out.println("-- salário final: R$ " + String.format("%.2f", fsal * (1 + 0.08)) + " --");
+                    } else {
+                        System.out.println("-- salário final: R$ " + String.format("%.2f", fsal * (1 + 0.04)) + " --");
+                    }
+                    break;
+
+                case 3:
+                    System.out.println("programa finalizado.");
+                    in.close();
+                    System.exit(0);
+                    break;
+
+                default:
+                    System.out.println("opção inválida.");
+                    break;
+            }
+
+            cont++;
+        }
+        in.close();
+    }
+}
