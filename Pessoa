@@ -1,0 +1,37 @@
+class Pessoa {
+    private String nome;
+    private int idade;
+    private double altura;
+    private double peso;
+
+    public Pessoa(String nome, int idade, double altura, double peso) {
+        this.nome = nome;
+        this.idade = idade;
+        this.altura = altura;
+        this.peso = peso;
+    }
+
+
+    public void envelhecer() {
+        idade++;
+    }
+
+    public void engordar(double ganhoPeso) {
+        if (ganhoPeso > 0) {
+            peso += ganhoPeso;
+        }
+    }
+
+    public void emagrecer(double perdaPeso) {
+        if (perdaPeso > 0 && peso - perdaPeso > 0) {
+            peso -= perdaPeso;
+        }
+    }
+
+    public void exibirDados() {
+        System.out.println("nome: " + nome);
+        System.out.println("idade: " + idade + " anos");
+        System.out.println("altura: " + altura + " m");
+        System.out.println("peso: " + peso + " kg");
+    }
+}
