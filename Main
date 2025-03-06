@@ -1,0 +1,16 @@
+public class Main {
+    public static void main(String[] args) {
+        Pessoa pessoa = new Pessoa("Marina", 21, 1.56, 50.0);
+
+        System.out.println("1.dados iniciais:");
+        pessoa.exibirDados();
+
+        //testando métodos
+        pessoa.envelhecer();
+        pessoa.engordar(5.5);
+        pessoa.emagrecer(3.5);
+
+        System.out.println("\n2.dados atuaizados:");
+        pessoa.exibirDados();
+    }
+}
