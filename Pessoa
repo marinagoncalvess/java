@@ -35,3 +35,30 @@ class Pessoa {
         System.out.println("peso: " + peso + " kg");
     }
 }
+
+//classe Account
+
+public class Account {
+    String accountNumber;
+    String accountOwner;
+    double balance;
+
+   boolean withdraw(double amount){
+     if(amount>0) {
+       balance -= amount;
+       return true;
+     }
+     return false;
+   }
+    void printBalance(){
+     System.out.println("Saldo: R$ " + balance);
+    }
+    boolean deposit(double account){
+        if(account>0) {
+          balance = balance + account;
+          return true;
+        }
+        return false;
+    }
+
+}
