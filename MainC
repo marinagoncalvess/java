@@ -1,0 +1,19 @@
+public class MainC {
+    public static void main(String[] args) {
+        Carro MCarro = new Carro("Toyota", "Corolla", 2020);
+
+        System.out.println("1.dados iniciais:");
+        MCarro.exibirDados();
+
+        //testando métodos
+        MCarro.acelerar();
+        MCarro.acelerar();
+        MCarro.acelerar();
+
+        MCarro.frear();
+        MCarro.frear();
+
+        System.out.println("\n2.dados atuaizados:");
+        MCarro.exibirDados();
+    }
+}
