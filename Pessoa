@@ -23,7 +23,7 @@ class Pessoa {
     }
 
     public void emagrecer(double perdaPeso) {
-        if (perdaPeso > 0 && peso - perdaPeso > 0) {
+        if (perdaPeso > 0 && peso - perdaPeso >= 0) {
             peso -= perdaPeso;
         }
     }
